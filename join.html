@@ -197,7 +197,7 @@
         </p>
 
         <p>
-            Ang pormularyong ito ay direktang ipapadala sa aming opisyal na email sa pamamagitan ng aming pampublikong gateway API.
+            Ang pormularyong ito ay direktang ipapadala sa aming opisyal na email sa pamamanan ng aming pampublikong gateway API.
         </p>
 
         <p>
@@ -273,15 +273,17 @@
         <p>&copy; 2026 Samahan ng Araling Panlipunan — Palawan National School. Lahat ng Karapatan ay Reserbado.</p>
     </footer>
 
-    <!-- Web3Forms Client Script -->
+    <!-- Web3Forms Client Script (must be loaded before submission) -->
     <script src="https://web3forms.com/client/script.js" async defer></script>
 
-    <!-- Client-Side Captcha Validation Script -->
+    <!-- Updated Client-Side Validation Script -->
     <script>
         const form = document.getElementById('joinForm');
         form.addEventListener('submit', function(e) {
-            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]');
-            if (!hCaptcha || !hCaptcha.value) {
+            // Find the hcaptcha token element populated by hCaptcha widget
+            const hCaptchaResponse = form.querySelector('[name="h-captcha-response"]');
+            
+            if (!hCaptchaResponse || !hCaptchaResponse.value) {
                 e.preventDefault();
                 alert("Pakisagutan muna ang hCaptcha bago isumite ang pormularyo.");
             }
