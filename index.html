@@ -1,1 +1,225 @@
-hh
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahanan - Samahan ng Araling Panlipunan | PNS</title>
+    <style>
+        :root {
+            --maroon-dark: #4A0000;
+            --maroon: #7A0000;
+            --maroon-light: #990000;
+            --gold: #D4AF37;
+            --gold-light: #FFF8DC;
+            --bg: #FAFAFA;
+            --text: #222222;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--maroon-dark), var(--maroon));
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .club-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--gold);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+            background-color: #ffffff;
+            object-fit: cover;
+        }
+
+        nav {
+            background-color: var(--maroon-dark);
+            padding: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 22px;
+            margin: 0 4px;
+            font-weight: 600;
+            border-radius: 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--gold);
+            color: var(--maroon-dark);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 45px auto;
+            background-color: #ffffff;
+            padding: 45px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            border-top: 6px solid var(--maroon);
+        }
+
+        h1 {
+            color: var(--maroon);
+            font-size: 28px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 12px;
+            margin-top: 0;
+        }
+
+        .action-card {
+            background-color: var(--gold-light);
+            border-left: 5px solid var(--gold);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--maroon), var(--maroon-light));
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            display: inline-block;
+            font-weight: bold;
+            border: 2px solid var(--gold);
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 12px rgba(122, 0, 0, 0.3);
+            margin-top: 10px;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold);
+            color: var(--maroon-dark);
+        }
+
+        .banner-img {
+            border: 3px solid var(--maroon);
+            border-radius: 12px;
+            margin-top: 15px;
+            max-width: 100%;
+            height: auto;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .banner-img:hover {
+            transform: scale(1.02);
+        }
+
+        mark {
+            background-color: #FFF2A8;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px dashed var(--gold);
+        }
+
+        footer {
+            background-color: var(--maroon-dark);
+            color: #ffffff;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+            font-size: 14px;
+            border-top: 4px solid var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="logo.jpg" alt="AP Club Logo" class="club-logo" onerror="this.src='https://picsum.photos/id/1050/100/100'">
+            <div>
+                <h1 style="margin: 0; font-size: 32px; color: #ffffff; border: none;">Samahan ng Araling Panlipunan</h1>
+                <h2 style="margin: 6px 0 0 0; font-size: 19px; color: var(--gold); font-weight: 400;">Palawan National School — Lungsod ng Puerto Princesa</h2>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html" class="active">Tahanan</a>
+        <a href="about.html">Tungkol sa Amin</a>
+        <a href="activities.html">Mga Gawain</a>
+        <a href="media.html">Galeriya ng Midya</a>
+        <a href="join.html">Sali Na!</a>
+    </nav>
+
+    <div class="container">
+        <h1>Maligayang Pagdating sa AP Club ng PNS!</h1>
+        
+        <p align="justify">
+            Malugod naming kayong tinatanggap sa opisyal na portal ng <b>Samahan ng Araling Panlipunan (AP Club)</b> ng <i>Palawan National School</i>! Ang aming samahan ay nakatuon sa pagpapalalim ng kamalayan sa kasaysayan, pagmamahal sa bayan, at aktibong pakikilahok ng mga mag-aaral sa mga isyung panlipunan sa Lungsod ng Puerto Princesa.
+        </p>
+
+        <p align="left">
+            Sa pamamagitan ng mga makabuluhang talakayan, pangangalaga sa kalikasan, at pagprotekta sa lokal na pamana ng Palawan, itinataguyod namin ang kakayahan ng bawat kabataan bilang lider ng kinabukasan.
+        </p>
+
+        <p align="left">
+            Maging ikaw man ay interesado sa Kasaysayan ng Pilipinas, Araling Asyano, Pandaigdigang Kabihasnan, o Ekonomiks, ang aming club ay nagbibigay ng masiglang espasyo upang matuto, lumago, at maglingkod sa kapwa.
+        </p>
+
+        <p align="left">
+            Makiisa sa aming pagdiriwang ng <u>ika-119 na taon</u> (<mark>119<sup>th</sup> milestone year</mark>) ng kahusayan sa akademya at adbokasiyang pangkasaysayan sa lalawigan ng Palawan!
+        </p>
+
+        <div class="action-card">
+            <h3 style="margin-top: 0; color: var(--maroon);">Maglingkod at Maging Bahagi ng Aming Samahan</h3>
+            <p>
+                Nais mo bang linangin ang iyong kakayahan sa pamumuno at mapalalim ang iyong kaalaman sa kasaysayan? Bukas ang pintuan ng AP Club para sa lahat ng mag-aaral ng Palawan National School.
+            </p>
+            
+            <a href="join.html" style="text-decoration: none;"><button class="btn-primary">Mag-register Bilang Kasapi Ngayon</button></a>
+        </div>
+
+        <h3 style="color: var(--maroon); margin-top: 35px;">Kaugnay na Sangay at Pamayanan</h3>
+        <p>
+            Ang aming samahan ay gumagalaw sa ilalim ng mga pangkalahatang alituntunin at kurikulum na itinatakda ng <a href="https://www.deped.gov.ph" target="_blank" style="color: var(--maroon); font-weight: bold; text-decoration: underline;">Kagawaran ng Edukasyon (DepEd)</a>.
+        </p>
+
+        <a href="https://www.deped.gov.ph" target="_blank">
+            <img src="deped.png" alt="Palawan National School Campus Banner" class="banner-img" width="100%" onerror="this.src='https://picsum.photos/id/1018/900/300'">
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Samahan ng Araling Panlipunan — Palawan National School. Lahat ng Karapatan ay Reserbado.</p>
+    </footer>
+
+</body>
+</html>

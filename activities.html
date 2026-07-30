@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mga Gawain - AP Club | Palawan National School</title>
+    <style>
+        :root {
+            --maroon-dark: #4A0000;
+            --maroon: #7A0000;
+            --gold: #D4AF37;
+            --gold-light: #FFF8DC;
+            --bg: #FAFAFA;
+            --text: #222222;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--maroon-dark), var(--maroon));
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .club-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--gold);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+            background-color: #ffffff;
+            object-fit: cover;
+        }
+
+        nav {
+            background-color: var(--maroon-dark);
+            padding: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 22px;
+            margin: 0 4px;
+            font-weight: 600;
+            border-radius: 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--gold);
+            color: var(--maroon-dark);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 45px auto;
+            background-color: #ffffff;
+            padding: 45px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            border-top: 6px solid var(--maroon);
+        }
+
+        h1, h2 {
+            color: var(--maroon);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        ol {
+            background-color: #FFFDF5;
+            padding: 25px 45px;
+            border-left: 5px solid var(--maroon);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        ol li { margin-bottom: 10px; font-weight: 600; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            box-shadow: var(--shadow);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: var(--maroon);
+            color: white;
+            padding: 16px;
+            text-align: left;
+            border-bottom: 3px solid var(--gold);
+            font-size: 16px;
+        }
+
+        td { padding: 14px 16px; border-bottom: 1px solid #eeeeee; }
+        tr:nth-child(even) { background-color: #FFF9F9; }
+        tr:hover { background-color: #FFF2F2; }
+
+        footer {
+            background-color: var(--maroon-dark);
+            color: #ffffff;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+            font-size: 14px;
+            border-top: 4px solid var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="logo.jpg" alt="AP Club Logo" class="club-logo" onerror="this.src='https://picsum.photos/id/1050/100/100'">
+            <div>
+                <h1 style="margin: 0; font-size: 32px; color: #ffffff; border: none;">Samahan ng Araling Panlipunan</h1>
+                <h2 style="margin: 6px 0 0 0; font-size: 19px; color: var(--gold); font-weight: 400; border: none;">Palawan National School — Lungsod ng Puerto Princesa</h2>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Tahanan</a>
+        <a href="about.html">Tungkol sa Amin</a>
+        <a href="activities.html" class="active">Mga Gawain</a>
+        <a href="media.html">Galeriya ng Midya</a>
+        <a href="join.html">Sali Na!</a>
+    </nav>
+
+    <div class="container">
+        <h1>Mga Gawain at Iskedyul ng AP Club</h1>
+
+        <p>
+            Narito ang nakalatag na iskedyul ng mga proyekto at aktibidad para sa kasalukuyang taong panuruan. Ang lahat ng kasapi ay inaasahang makikilahok nang aktibo sa mga sumusunod na kaganapan.
+        </p>
+
+        <p>
+            Inihanda ang mga gawaing ito upang linangin ang kaalaman sa kasaysayan at mapaunlad ang kakayahan sa pamumuno.
+        </p>
+
+        <p>
+            Magkakaroon din ng mga parangal para sa mga mag-aaral na magpapakita ng natatanging husay sa bawat aktibidad.
+        </p>
+
+        <p>
+            Siguraduhing nakatala ang inyong pangalan sa bawat komite bago magsimula ang mga proyekto.
+        </p>
+
+        <h2>Hakbang sa Pagpaparehistro</h2>
+        <ol>
+            <li>Sagutan ang opisyal na pormularyo ng pagpaparehistro sa internet.</li>
+            <li>Dumalo sa oryentasyon ng AP Club sa takdang araw.</li>
+            <li>Pumili ng komiteng nais mong kabilangan.</li>
+            <li>Maghintay ng karagdagang anunsyo mula sa mga opisyal na tagapagpaganap.</li>
+        </ol>
+
+        <h2>Talaan ng mga Taunang Gawain</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pangalan ng Gawain</th>
+                    <th>Petsa</th>
+                    <th>Lugar</th>
+                    <th>Tagapamahala</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Buwan ng United Nations</td>
+                    <td>Oktubre 1, 2026</td>
+                    <td>PNS Abueg Gymnasium</td>
+                    <td>Iaanunsiyo pa.</td>
+                </tr>
+                <tr>
+                    <td>Maghintay ng Karagdagang Anunsyo.</td>
+                    <td>Oktubre 00</td>
+                    <td>Old AP Department</td>
+                    <td>Iaanunsiyo pa.</td>
+                </tr>
+                <tr>
+                    <td>Maghintay ng Karagdagang Anunsyo.</td>
+                    <td>Nobyembre 00</td>
+                    <td>Old AP Department</td>
+                    <td>Iaanunsiyo pa.</td>
+                </tr>
+                <tr>
+                    <td>Maghintay ng Karagdagang Anunsyo.</td>
+                    <td>Disyembre 00</td>
+                    <td>Gymnasium ng PNS</td>
+                    <td>Iaanunsiyo pa.</td>
+                </tr>
+                <tr>
+                    <td>Maghintay ng Karagdagang Anunsyo.</td>
+                    <td>Pebreo 00</td>
+                    <td>Old AP Department</td>
+                    <td>Iaanunsiyo pa.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Samahan ng Araling Panlipunan — Palawan National School. Lahat ng Karapatan ay Reserbado.</p>
+    </footer>
+
+</body>
+</html>

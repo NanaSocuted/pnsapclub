@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tungkol sa Amin - AP Club | Palawan National School</title>
+    <style>
+        :root {
+            --maroon-dark: #4A0000;
+            --maroon: #7A0000;
+            --gold: #D4AF37;
+            --gold-light: #FFF8DC;
+            --bg: #FAFAFA;
+            --text: #222222;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--maroon-dark), var(--maroon));
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .club-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--gold);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+            background-color: #ffffff;
+            object-fit: cover;
+        }
+
+        nav {
+            background-color: var(--maroon-dark);
+            padding: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 22px;
+            margin: 0 4px;
+            font-weight: 600;
+            border-radius: 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--gold);
+            color: var(--maroon-dark);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 45px auto;
+            background-color: #ffffff;
+            padding: 45px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            border-top: 6px solid var(--maroon);
+        }
+
+        h1, h2 {
+            color: var(--maroon);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .custom-list {
+            background-color: #FFFDF5;
+            padding: 25px 45px;
+            border-left: 5px solid var(--gold);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .custom-list li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: var(--maroon-dark);
+            color: #ffffff;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+            font-size: 14px;
+            border-top: 4px solid var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="logo.jpg" alt="AP Club Logo" class="club-logo" onerror="this.src='https://picsum.photos/id/1050/100/100'">
+            <div>
+                <h1 style="margin: 0; font-size: 32px; color: #ffffff; border: none;">Samahan ng Araling Panlipunan</h1>
+                <h2 style="margin: 6px 0 0 0; font-size: 19px; color: var(--gold); font-weight: 400; border: none;">Palawan National School — Lungsod ng Puerto Princesa</h2>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Tahanan</a>
+        <a href="about.html" class="active">Tungkol sa Amin</a>
+        <a href="activities.html">Mga Gawain</a>
+        <a href="media.html">Galeriya ng Midya</a>
+        <a href="join.html">Sali Na!</a>
+    </nav>
+
+    <div class="container">
+        <h1>Tungkol sa AP Club ng Palawan National School</h1>
+        
+        <p align="justify">
+            Ang Samahan ng Araling Panlipunan ay ang pangunahing organisasyong pampagkakatuto sa Agham Panlipunan sa <u>Palawan National School</u>. Layunin nitong isulong ang malalim na pag-unawa sa kulturang Pilipino, lokal na pamana ng mga Palaweño, at kamalayang sosyo-ekonomiko.
+        </p>
+
+        <p align="left">
+            Ang aming pangunahing misyon ay nakatuon sa pagkakaisa, katapatang akademiko, at pagbuo ng bansa. Iniuugnay din namin ang agham at lipunan, tulad ng pangangalaga sa mahalagang likas na yaman tulad ng tubig (H<sub>2</sub>O) sa ating kalikasan.
+        </p>
+
+        <p align="left">
+            Sa pamamagitan ng patuloy na pag-gabay ng aming mga tagapayo, ang mga mag-aaral ay natututong maging kritikal sa pagsusuri ng kasaysayan at kasalukuyang mga kaganapan sa bansa.
+        </p>
+
+        <p align="left">
+            Patuloy kaming nagsisilbing tanglaw ng kaalaman upang hubugin ang mga mag-aaral na maging responsable at may pagmamahal sa bayan.
+        </p>
+
+        <h2>Istraktura ng Organisasyon</h2>
+        <ul class="custom-list">
+            <li>Mga Opisyal na Tagapagpaganap
+                <ul>
+                    <li>Pangulo: Princess Vera C. Madsam</li>
+                    <li>Pangalawang Pangulo: Joross Carl B. Palomar</li>
+                    <li>Sekretarya: Mary Ysabel D. Relota</li>
+                    <li>Ingat-Yaman: Keziah Miyuki M. Sabero</li>
+                    <li>Tagasuri: Princess Mary Y. Villaverde</li>
+                    <li>Tagapag-ugnay ng Impormasyon: Jezelle Lee Villarubia</li>
+                    <li>Opisyal sa Protokol: Macky I. Darjuan</li>
+                    <li>Ikalawang Opisyal sa Protokol: Nina J. Cayetano</li>
+                </ul>
+            </li>
+
+            <li>Kinatawan ng bawat antas
+                <ul>
+                    <li>Kinatawan sa Baitang 7: Jaron Evan Steven M. Nazon</li>
+                    <li>Ikalawang Kinatawan sa Baitang 7: Kent V. Dequina</li>
+                    <li>Kinatawan sa Baitang 8: Lherine Althea Ramirez</li>
+                    <li>Ikalawang Kinatawan sa Baitang 8: Jaxynn Jaropohop</li>
+                    <li>Kinatawan sa Baitang 9: Lilian Llanera</li>
+                    <li>Ikalawang Kinatawan sa Biatang 9: Sevilla (Hindi pa naaalam/For futher research)</li>
+                    <li>Kinatawan sa Baitang 10: Virginia Kate P. Magboo</li>
+                    <li>Ikalawang Kinatawan sa Baitang 10: Danica C. Pozas</li>
+                </ul>
+            </li>
+
+            <li>Mga Ulo ng Komite
+                <ul>
+                    <li>Komite ng Sekretaryat: Shainaz Zachiko Bonayon
+                        <ul>
+                            <li><small><i>Itinalagang Opisyal para sa Pangunahing Komite: Mary Ysabel Relota</i></small></li>
+                        </ul>
+                    </li>
+
+                    <li>Komite sa Pananalapi: Micah Zephaniah Alcazer
+                        <ul>
+                            <li><small><i>Itinalagang Opisyal para sa Pangunahing Komite: Keziah Miyuki M. Saberdo</i></small></li>
+                        </ul>
+                    </li>
+
+                    <li>Komite sa mga Espesyal na Proyekto: Flouvhidynt R. Bague
+                        <ul>
+                            <li><small><i>Itinalagang Opisyal para sa Pangunahing Komite: Princess Vera C. Madsam at Joross Carl B. Palomar</i></small></li>
+                        </ul>
+                    </li>
+
+                    <li>Komite sa Pagpaplano: Clennie Repaso</li>
+                         <ul>
+                            <li><small><i>Itinalagang Opisyal para sa Pangunahing Komite: Princess Vera C. Madsam at Joross Carl B. Palomar</i></small></li>
+                        </ul>
+                    </li>
+
+                     <li>Komite sa Dokumentasyon at Komunikasyon: Sheane Tal Precinillo</li>
+                        <ul>
+                            <li><small><i>Itinalagang Opisyal para sa Pangunahing Komite: Jezelle Lee Villarubia</i></small></li>
+                        </ul>
+                    </li>
+
+                     <li>Komite sa Teknikal: Miguel Lorenz Llavan</li>
+                        <ul>
+                            <li><small><i>Itinalagang Opisyal para sa Pangunahing Komite: Macky I. Darjuan</i></small></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>Mga Gurong Tagapayo sa Araling Panlipunan</li>
+                <ul>
+                    <li>Angeline Pedrosa Sapalaran</li>
+                    <li>Mayang Nolasco</li>
+                    <li>El Ca</li>
+                    <li>Mjoy PE</li>
+        </ul>
+
+        <h2>Pangunahing Halagahan (Core Values)</h2>
+        <ul class="custom-list">
+            <li><b>Makabayan:</b> Pagmamahal sa bansang Pilipinas at sa lokal na pamana ng Palawan.</li>
+            <li><b>Kagalingan at Katapatan:</b> Pagtataguyod ng katotohanan sa pag-aaral ng kasaysayan.</li>
+            <li><b>Pamumuno:</b> Pagbibigay-kapangyarihan sa mga kabataan upang mamuno sa pamayanan.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Samahan ng Araling Panlipunan — Palawan National School. Lahat ng Karapatan ay Reserbado.</p>
+    </footer>
+
+</body>
+</html>

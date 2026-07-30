@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sali Na! - AP Club | Palawan National School</title>
+    <style>
+        :root {
+            --maroon-dark: #4A0000;
+            --maroon: #7A0000;
+            --maroon-light: #990000;
+            --gold: #D4AF37;
+            --gold-light: #FFF8DC;
+            --bg: #FAFAFA;
+            --text: #222222;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--maroon-dark), var(--maroon));
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .club-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--gold);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+            background-color: #ffffff;
+            object-fit: cover;
+        }
+
+        nav {
+            background-color: var(--maroon-dark);
+            padding: 14px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 22px;
+            margin: 0 4px;
+            font-weight: 600;
+            border-radius: 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--gold);
+            color: var(--maroon-dark);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 45px auto;
+            background-color: #ffffff;
+            padding: 45px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            border-top: 6px solid var(--maroon);
+        }
+
+        h1 {
+            color: var(--maroon);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .form-card {
+            background-color: #FFFDF5;
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid #F0E0B0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-top: 25px;
+        }
+
+        .form-group { margin-bottom: 22px; }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: var(--maroon);
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #E0E0E0;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 15px;
+            transition: 0.3s;
+            background-color: #ffffff;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--maroon);
+            outline: none;
+            box-shadow: 0 0 8px rgba(122, 0, 0, 0.2);
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(135deg, var(--maroon), var(--maroon-light));
+            color: white;
+            font-weight: bold;
+            padding: 16px 30px;
+            border: 2px solid var(--gold);
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 17px;
+            width: 100%;
+            transition: 0.3s;
+            box-shadow: 0 4px 12px rgba(122, 0, 0, 0.3);
+        }
+
+        input[type="submit"]:hover {
+            background: var(--gold);
+            color: var(--maroon-dark);
+        }
+
+        footer {
+            background-color: var(--maroon-dark);
+            color: #ffffff;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+            font-size: 14px;
+            border-top: 4px solid var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="logo.jpg" alt="AP Club Logo" class="club-logo" onerror="this.src='https://picsum.photos/id/1050/100/100'">
+            <div>
+                <h1 style="margin: 0; font-size: 32px; color: #ffffff; border: none;">Samahan ng Araling Panlipunan</h1>
+                <h2 style="margin: 6px 0 0 0; font-size: 19px; color: var(--gold); font-weight: 400; border: none;">Palawan National School — Lungsod ng Puerto Princesa</h2>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Tahanan</a>
+        <a href="about.html">Tungkol sa Amin</a>
+        <a href="activities.html">Mga Gawain</a>
+        <a href="media.html">Galeriya ng Midya</a>
+        <a href="join.html" class="active">Sali Na!</a>
+    </nav>
+
+    <div class="container">
+        <h1>Pormularyo ng Pag-sali sa AP Club</h1>
+        
+        <p>
+            Ipunan ang pormularyo sa ibaba upang opisyal na maging kasapi ng Samahan ng Araling Panlipunan sa Palawan National School.
+        </p>
+
+        <p>
+            Ang pormularyong ito ay direktang ipapadala sa aming opisyal na email sa pamamagitan ng aming pampublikong gateway API.
+        </p>
+
+        <p>
+            Siguraduhing tama at aktibo ang inyong email address at phone number upang matanggap ang aming kumpirmasyon.
+        </p>
+
+        <p>
+            Inaasahan namin ang inyong aktibong pakikilahok sa aming mga proyekto ngayong taon!
+        </p>
+
+        <div class="form-card">
+            <!-- REAL FUNCTIONAL FORM USING WEB3FORMS API -->
+            <form action="https://api.web3forms.com/submit" method="POST">
+                
+                <!-- Insert your free access key from web3forms.com in place of the key below -->
+                <input type="hidden" name="access_key" value="5804bf1c-ed41-4d0b-8dac-d48c4a276bae">
+                <input type="hidden" name="subject" value="Bagong Pagpaparehistro sa AP Club - PNS">
+                <input type="hidden" name="from_name" value="AP Club Web Portal">
+
+                <div class="form-group">
+                    <label for="fullname">Buong Pangalan (Full Name):</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Halimbawa: Juan Dela Cruz" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Halimbawa: magaaral@pns.edu.ph" style="width: 100%; padding: 12px 15px; border: 2px solid #E0E0E0; border-radius: 8px; box-sizing: border-box; font-size: 15px;">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+63 000 000 0000" style="width: 100%; padding: 12px 15px; border: 2px solid #E0E0E0; border-radius: 8px; box-sizing: border-box; font-size: 15px;">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Petsa ng Kapanganakan (Date of Birth):</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="grade">Baitang / Grade Level (7-10):</label>
+                    <input type="number" id="grade" name="grade" min="7" max="10" placeholder="Halimbawa: 10" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="strand">Pangkat:</label>
+                    <select id="strand" name="strand" required>
+                        <option value="">-- Pumili ng Baitang --</option>
+                        <option value="JHS">Junior High School</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullname">Seksyon:</label>
+                    <input type="text" id="seksyon" name="seksyon" placeholder="Halimbawa: GRADE 10 QUEZON" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Bakit mo nais sumali sa AP Club?</label>
+                    <textarea id="reason" name="reason" rows="4" placeholder="Isulat ang iyong dahilan dito..."></textarea>
+                </div>
+
+                <input type="submit" value="Ipadala ang Aplikasyon">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Samahan ng Araling Panlipunan — Palawan National School. Lahat ng Karapatan ay Reserbado.</p>
+    </footer>
+
+</body>
+</html>
