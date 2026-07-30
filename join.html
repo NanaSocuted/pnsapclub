@@ -116,7 +116,7 @@
             color: var(--maroon);
         }
 
-        input[type="text"], input[type="email"], input[type="number"], input[type="date"], select, textarea {
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="date"], select, textarea {
             width: 100%;
             padding: 12px 15px;
             border: 2px solid #E0E0E0;
@@ -131,6 +131,12 @@
             border-color: var(--maroon);
             outline: none;
             box-shadow: 0 0 8px rgba(122, 0, 0, 0.2);
+        }
+
+        .h-captcha-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 22px;
         }
 
         input[type="submit"] {
@@ -204,9 +210,8 @@
 
         <div class="form-card">
             <!-- REAL FUNCTIONAL FORM USING WEB3FORMS API -->
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST" id="joinForm">
                 
-                <!-- Insert your free access key from web3forms.com in place of the key below -->
                 <input type="hidden" name="access_key" value="5804bf1c-ed41-4d0b-8dac-d48c4a276bae">
                 <input type="hidden" name="subject" value="Bagong Pagpaparehistro sa AP Club - PNS">
                 <input type="hidden" name="from_name" value="AP Club Web Portal">
@@ -218,19 +223,18 @@
 
                 <div class="form-group">
                     <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" placeholder="Halimbawa: magaaral@pns.edu.ph" style="width: 100%; padding: 12px 15px; border: 2px solid #E0E0E0; border-radius: 8px; box-sizing: border-box; font-size: 15px;">
+                    <input type="email" id="email" name="email" placeholder="Halimbawa: magaaral@pns.edu.ph" required>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+63 000 000 0000" style="width: 100%; padding: 12px 15px; border: 2px solid #E0E0E0; border-radius: 8px; box-sizing: border-box; font-size: 15px;">
+                    <input type="tel" id="phone" name="phone" placeholder="+63 000 000 0000" required>
                 </div>
 
                 <div class="form-group">
                     <label for="dob">Petsa ng Kapanganakan (Date of Birth):</label>
                     <input type="date" id="dob" name="dob" required>
                 </div>
-
 
                 <div class="form-group">
                     <label for="grade">Baitang / Grade Level (7-10):</label>
@@ -242,17 +246,22 @@
                     <select id="strand" name="strand" required>
                         <option value="">-- Pumili ng Baitang --</option>
                         <option value="JHS">Junior High School</option>
-                  </select>
+                    </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="fullname">Seksyon:</label>
+                    <label for="seksyon">Seksyon:</label>
                     <input type="text" id="seksyon" name="seksyon" placeholder="Halimbawa: GRADE 10 QUEZON" required>
                 </div>
 
                 <div class="form-group">
                     <label for="reason">Bakit mo nais sumali sa AP Club?</label>
                     <textarea id="reason" name="reason" rows="4" placeholder="Isulat ang iyong dahilan dito..."></textarea>
+                </div>
+
+                <!-- Web3Forms Zero-Config hCaptcha Container -->
+                <div class="h-captcha-container">
+                    <div class="h-captcha" data-captcha="true"></div>
                 </div>
 
                 <input type="submit" value="Ipadala ang Aplikasyon">
@@ -263,6 +272,21 @@
     <footer>
         <p>&copy; 2026 Samahan ng Araling Panlipunan — Palawan National School. Lahat ng Karapatan ay Reserbado.</p>
     </footer>
+
+    <!-- Web3Forms Client Script -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
+    <!-- Client-Side Captcha Validation Script -->
+    <script>
+        const form = document.getElementById('joinForm');
+        form.addEventListener('submit', function(e) {
+            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]');
+            if (!hCaptcha || !hCaptcha.value) {
+                e.preventDefault();
+                alert("Pakisagutan muna ang hCaptcha bago isumite ang pormularyo.");
+            }
+        });
+    </script>
 
 </body>
 </html>
