@@ -8,11 +8,10 @@
     <!-- Basic Meta Description -->
     <meta name="description" content="Maligayang pagdating sa opisyal na web portal ng Samahan ng Araling Panlipunan (AP Club) sa Palawan National School, Lungsod ng Puerto Princesa.">
 
-    <!-- Open Graph Meta Tags (For Messenger, Facebook, WhatsApp, etc.) -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tahanan - Samahan ng Araling Panlipunan | PNS">
     <meta property="og:description" content="Maligayang pagdating sa opisyal na web portal ng Samahan ng Araling Panlipunan sa Palawan National School. Maging bahagi ng aming samahan!">
-    <!-- CHANGE 'https://yourdomain.com' TO YOUR ACTUAL WEBSITE URL BELOW -->
     <meta property="og:url" content="https://pnsapclub.netlify.app/index.html">
     <meta property="og:image" content="https://pnsapclub.netlify.app/logo.jpg">
 
@@ -20,8 +19,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tahanan - Samahan ng Araling Panlipunan | PNS">
     <meta name="twitter:description" content="Maligayang pagdating sa opisyal na web portal ng Samahan ng Araling Panlipunan sa Palawan National School.">
-    <!-- CHANGE 'https://yourdomain.com' TO YOUR ACTUAL WEBSITE URL BELOW -->
-    <meta name="twitter:image" content=https://pnsapclub.netlify.app/LOGO.jpg">
+    <meta name="twitter:image" content="https://pnsapclub.netlify.app/logo.jpg">
 
     <link rel="icon" type="image/jpeg" href="logo.jpg">
     <style>
@@ -37,12 +35,21 @@
         }
 
         body {
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg);
+            
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; /* [B1] font-family */
+            font-size: 16px; /* [B2] font-size */
+            font-weight: 400; /* [B3] font-weight */
             color: var(--text);
             line-height: 1.8;
+            margin: 0;
+            padding: 0;
+
+            background-color: var(--bg); /* [C1] background-color */
+            background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px); /* [C2] background-image */
+            background-repeat: repeat; /* [C3] background-repeat */
+            background-size: 24px 24px; /* [C4] background-size */
+            background-position: center center; /* [C5] background-position */
+            /* [C6] High contrast background ensures text remains easy to read */
         }
 
         header {
@@ -89,7 +96,7 @@
             text-decoration: none;
             padding: 10px 22px;
             margin: 0 4px;
-            font-weight: 600;
+            font-weight: 600; /* [B3] font-weight */
             border-radius: 20px;
             display: inline-block;
             transition: all 0.3s ease;
@@ -113,10 +120,15 @@
 
         h1 {
             color: var(--maroon);
-            font-size: 28px;
+            font-size: 28px; /* [B2] font-size */
             border-bottom: 2px solid #eee;
             padding-bottom: 12px;
             margin-top: 0;
+        }
+
+        /* [B4] font-style class added */
+        .italic-text {
+            font-style: italic; 
         }
 
         .action-card {
@@ -134,7 +146,7 @@
             text-decoration: none;
             border-radius: 30px;
             display: inline-block;
-            font-weight: bold;
+            font-weight: bold; /* [B3] font-weight */
             border: 2px solid var(--gold);
             cursor: pointer;
             transition: 0.3s;
@@ -174,7 +186,7 @@
             text-align: center;
             padding: 25px;
             margin-top: 60px;
-            font-size: 14px;
+            font-size: 14px; /* [B2] font-size */
             border-top: 4px solid var(--gold);
         }
     </style>
@@ -203,7 +215,7 @@
         <h1>Maligayang Pagdating sa AP Club ng PNS!</h1>
         
         <p align="justify">
-            Malugod naming kayong tinatanggap sa opisyal na portal ng <b>Samahan ng Araling Panlipunan (AP Club)</b> ng <i>Palawan National School</i>! Ang aming samahan ay nakatuon sa pagpapalalim ng kamalayan sa kasaysayan, pagmamahal sa bayan, at aktibong pakikilahok ng mga mag-aaral sa mga isyung panlipunan sa Lungsod ng Puerto Princesa.
+            Malugod naming kayong tinatanggap sa opisyal na portal ng <b>Samahan ng Araling Panlipunan (AP Club)</b> ng <span class="italic-text">Palawan National School</span>! Ang aming samahan ay nakatuon sa pagpapalalim ng kamalayan sa kasaysayan, pagmamahal sa bayan, at aktibong pakikilahok ng mga mag-aaral sa mga isyung panlipunan sa Lungsod ng Puerto Princesa.
         </p>
 
         <p align="left">
