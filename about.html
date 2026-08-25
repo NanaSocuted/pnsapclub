@@ -12,7 +12,6 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tungkol sa Amin - AP Club | Palawan National School">
     <meta property="og:description" content="Alamin ang aming layunin, bisyon, misyon, at ang mga opisyal sa likod ng Samahan ng Araling Panlipunan ng Palawan National School.">
-    <!-- CHANGE 'https://yourdomain.com' TO YOUR ACTUAL WEBSITE URL BELOW -->
     <meta property="og:url" content="https://pnsapclub.netlify.app/about">
     <meta property="og:image" content="https://pnsapclub.netlify.app/logo.jpg">
 
@@ -20,7 +19,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tungkol sa Amin - AP Club | Palawan National School">
     <meta name="twitter:description" content="Alamin ang aming layunin, bisyon, misyon, at ang mga opisyal sa likod ng Samahan ng Araling Panlipunan ng Palawan National School.">
-    <!-- CHANGE 'https://yourdomain.com' TO YOUR ACTUAL WEBSITE URL BELOW -->
     <meta name="twitter:image" content="https://pnsapclub.netlify.app/logo.jpg">
 
     <link rel="icon" type="image/jpeg" href="logo.jpg">    
@@ -36,12 +34,22 @@
         }
 
         body {
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg);
+            /* SECTION B: CSS FONT STYLE */
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; /* font-family */
+            font-size: 16px; /* font-size */
+            font-weight: 400; /* font-weight */
             color: var(--text);
             line-height: 1.8;
+            margin: 0;
+            padding: 0;
+
+            /* SECTION C: CSS BACKGROUND */
+            background-color: var(--bg); /* background-color */
+            background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px); /* background-image */
+            background-repeat: repeat; /* background-repeat */
+            background-size: 24px 24px; /* background-size */
+            background-position: center center; /* background-position */
+            /* High contrast background ensures text readability */
         }
 
         header {
@@ -88,7 +96,7 @@
             text-decoration: none;
             padding: 10px 22px;
             margin: 0 4px;
-            font-weight: 600;
+            font-weight: 600; /* font-weight */
             border-radius: 20px;
             display: inline-block;
             transition: all 0.3s ease;
@@ -116,6 +124,19 @@
             padding-bottom: 10px;
         }
 
+        h1 {
+            font-size: 28px; /* font-size */
+        }
+
+        h2 {
+            font-size: 22px; /* font-size */
+        }
+
+        /* Explicit CSS font-style rule */
+        .italic-text {
+            font-style: italic; /* font-style */
+        }
+
         .custom-list {
             background-color: #FFFDF5;
             padding: 25px 45px;
@@ -134,7 +155,7 @@
             text-align: center;
             padding: 25px;
             margin-top: 60px;
-            font-size: 14px;
+            font-size: 14px; /* font-size */
             border-top: 4px solid var(--gold);
         }
     </style>
@@ -210,40 +231,39 @@
                 <ul>
                     <li>Komite ng Sekretaryat: Shainaz Zachiko Bonayon
                         <ul>
-                            <li><small><i>Itinalagang Opisyal para sa Pangunahing Komite: Mary Ysabel Relota</i></small></li>
+                            <li><small class="italic-text">Itinalagang Opisyal para sa Pangunahing Komite: Mary Ysabel Relota</small></li>
                         </ul>
                     </li>
 
                     <li>Komite sa Pananalapi: Micah Zephaniah Alcazer
                         <ul>
-                            <li><small><i>Itinalagang Opisyal para sa Pangunahing Komite: Keziah Miyuki M. Saberdo</i></small></li>
+                            <li><small class="italic-text">Itinalagang Opisyal para sa Pangunahing Komite: Keziah Miyuki M. Saberdo</small></li>
                         </ul>
                     </li>
 
                     <li>Komite sa mga Espesyal na Proyekto: Flouvhidynt R. Bague
                         <ul>
-                            <li><small><i>Itinalagang Opisyal para sa Pangunahing Komite: Princess Vera C. Madsam at Joross Carl B. Palomar</i></small></li>
+                            <li><small class="italic-text">Itinalagang Opisyal para sa Pangunahing Komite: Princess Vera C. Madsam at Joross Carl B. Palomar</small></li>
                         </ul>
                     </li>
 
                     <li>Komite sa Pagpaplano: Clennie Repaso
                         <ul>
-                            <li><small><i>Itinalagang Opisyal para sa Pangunahing Komite: Princess Vera C. Madsam at Joross Carl B. Palomar</i></small></li>
+                            <li><small class="italic-text">Itinalagang Opisyal para sa Pangunahing Komite: Princess Vera C. Madsam at Joross Carl B. Palomar</small></li>
                         </ul>
                     </li>
 
                     <li>Komite sa Dokumentasyon at Komunikasyon: Sheane Tal Precinillo
                         <ul>
-                            <li><small><i>Itinalagang Opisyal para sa Pangunahing Komite: Jezelle Lee Villarubia</i></small></li>
+                            <li><small class="italic-text">Itinalagang Opisyal para sa Pangunahing Komite: Jezelle Lee Villarubia</small></li>
                         </ul>
                     </li>
 
                     <li>Komite sa Teknikal: Miguel Lorenz Llavan
                         <ul>
-                            <li><small><i>Itinalagang Opisyal para sa Pangunahing Komite: Macky I. Darjuan</i></small></li>
+                            <li><small class="italic-text">Itinalagang Opisyal para sa Pangunahing Komite: Macky I. Darjuan</small></li>
                         </ul>
                     </li>
-
                 </ul>
             </li>
 
