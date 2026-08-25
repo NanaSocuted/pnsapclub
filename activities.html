@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mga Gawain - AP Club | Palawan National School">
     <meta property="og:description" content="Tingnan ang iskedyul ng mga proyekto at taunang aktibidad ng Samahan ng Araling Panlipunan sa Palawan National School.">
-    <meta property="og:url" content="https://pnsapclub.netlify.app/activities">
+    <meta property="og:url" content="https://pnsapclub.netlify.app/activities.html">
     <meta property="og:image" content="https://pnsapclub.netlify.app/logo.jpg">
     <meta property="og:image:type" content="image/jpeg">
 
@@ -23,10 +23,15 @@
     <meta name="twitter:image" content="https://pnsapclub.netlify.app/logo.jpg">
 
     <link rel="icon" type="image/jpeg" href="logo.jpg">
+
+    <!-- Font Awesome Icons Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
             --maroon-dark: #4A0000;
             --maroon: #7A0000;
+            --maroon-light: #990000;
             --gold: #D4AF37;
             --gold-light: #FFF8DC;
             --bg: #FAFAFA;
@@ -35,7 +40,6 @@
         }
 
         body {
-            /* SECTION B: CSS FONT STYLE */
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
             font-size: 16px;
             font-weight: 400;
@@ -50,6 +54,7 @@
             background-repeat: repeat;
             background-size: 24px 24px;
             background-position: center center;
+            background-attachment: fixed;
         }
 
         header {
@@ -126,10 +131,12 @@
 
         h1 {
             font-size: 28px;
+            margin-top: 0;
         }
 
         h2 {
             font-size: 22px;
+            margin-top: 35px;
         }
 
         .italic-text {
@@ -139,7 +146,7 @@
         ol {
             background-color: #FFFDF5;
             padding: 25px 45px;
-            border-left: 5px solid var(--maroon);
+            border-left: 5px solid var(--gold);
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
@@ -149,17 +156,24 @@
             font-weight: 600; 
         }
 
+        .table-container {
+            overflow-x: auto;
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 25px;
             box-shadow: var(--shadow);
             border-radius: 10px;
             overflow: hidden;
+            background-color: #ffffff;
+            border: 1px solid #d0d0d0;
         }
 
         th {
-            background-color: var(--maroon);
+            background-color: var(--maroon-dark);
             color: #ffffff;
             padding: 16px;
             text-align: left;
@@ -171,10 +185,29 @@
         td { 
             padding: 14px 16px; 
             border-bottom: 1px solid #eeeeee; 
+            text-align: left;
         }
 
-        tr:nth-child(even) { background-color: #FFF9F9; }
-        tr:hover { background-color: #FFF2F2; }
+        /* Alternating row colors and hover state */
+        tr:nth-child(even) { 
+            background-color: #FFFDF5; 
+        }
+
+        tr:hover { 
+            background-color: #F5E8C7; 
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .status-badge {
+            background-color: var(--gold-light);
+            color: var(--maroon-dark);
+            padding: 4px 10px;
+            border-radius: 12px;
+            border: 1px solid var(--gold);
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+        }
 
         footer {
             background-color: var(--maroon-dark);
@@ -194,21 +227,23 @@
             <img src="logo.jpg" alt="AP Club Logo" class="club-logo" onerror="this.src='https://picsum.photos/id/1050/100/100'">
             <div>
                 <h1 style="margin: 0; font-size: 32px; color: #ffffff; border: none;">Samahan ng Araling Panlipunan</h1>
-                <h2 style="margin: 6px 0 0 0; font-size: 19px; color: var(--gold); font-weight: 400; border: none;">Palawan National School — Lungsod ng Puerto Princesa</h2>
+                <h2 style="margin: 6px 0 0 0; font-size: 19px; color: var(--gold); font-weight: 400; border: none;">
+                    <i class="fa-solid fa-landmark"></i> Palawan National School — Lungsod ng Puerto Princesa
+                </h2>
             </div>
         </div>
     </header>
 
     <nav>
-        <a href="index.html">Tahanan</a>
-        <a href="about.html">Tungkol sa Amin</a>
-        <a href="activities.html" class="active">Mga Gawain</a>
-        <a href="media.html">Galeriya ng Midya</a>
-        <a href="join.html">Sali Na!</a>
+        <a href="index.html"><i class="fa-solid fa-house"></i> Tahanan</a>
+        <a href="about.html"><i class="fa-solid fa-address-card"></i> Tungkol sa Amin</a>
+        <a href="activities.html" class="active"><i class="fa-solid fa-calendar-check"></i> Mga Gawain</a>
+        <a href="media.html"><i class="fa-solid fa-images"></i> Galeriya ng Midya</a>
+        <a href="join.html"><i class="fa-solid fa-user-plus"></i> Sali Na!</a>
     </nav>
 
     <div class="container">
-        <h1>Mga Gawain at Iskedyul ng AP Club</h1>
+        <h1><i class="fa-solid fa-calendar-days"></i> Mga Gawain at Iskedyul ng AP Club</h1>
 
         <p>
             Narito ang nakalatag na iskedyul ng mga proyekto at aktibidad para sa kasalukuyang taong panuruan. Ang lahat ng kasapi ay inaasahang makikilahok nang aktibo sa mga sumusunod na kaganapan.
@@ -226,7 +261,7 @@
             Siguraduhing nakatala ang inyong pangalan sa bawat komite bago magsimula ang mga proyekto.
         </p>
 
-        <h2>Hakbang sa Pagpaparehistro</h2>
+        <h2><i class="fa-solid fa-list-check"></i> Hakbang sa Pagpaparehistro</h2>
         <ol>
             <li>Sagutan ang opisyal na pormularyo ng pagpaparehistro sa internet.</li>
             <li>Dumalo sa oryentasyon ng AP Club sa takdang araw.</li>
@@ -234,49 +269,51 @@
             <li>Maghintay ng karagdagang anunsyo mula sa mga opisyal na tagapagpaganap.</li>
         </ol>
 
-        <h2>Talaan ng mga Taunang Gawain</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Pangalan ng Gawain</th>
-                    <th>Petsa</th>
-                    <th>Lugar</th>
-                    <th>Tagapamahala</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Buwan ng United Nations</td>
-                    <td>Oktubre 1, 2026</td>
-                    <td>PNS Abueg Gymnasium</td>
-                    <td><span class="italic-text">Iaanunsiyo pa.</span></td>
-                </tr>
-                <tr>
-                    <td>7th Puerto Princesa Pista ng Kabataan</td>
-                    <td>August 1, 2026</td>
-                    <td>SM City Puerto Princesa - PGP Convention Hall</td>
-                    <td>City Youth Development Office</td>
-                </tr>
-                <tr>
-                    <td>Maghintay ng Karagdagang Anunsyo.</td>
-                    <td>Nobyembre 00</td>
-                    <td>Old AP Department</td>
-                    <td><span class="italic-text">Iaanunsiyo pa.</span></td>
-                </tr>
-                <tr>
-                    <td>Maghintay ng Karagdagang Anunsyo.</td>
-                    <td>Disyembre 00</td>
-                    <td>Gymnasium ng PNS</td>
-                    <td><span class="italic-text">Iaanunsiyo pa.</span></td>
-                </tr>
-                <tr>
-                    <td>Maghintay ng Karagdagang Anunsyo.</td>
-                    <td>Pebreo 00</td>
-                    <td>Old AP Department</td>
-                    <td><span class="italic-text">Iaanunsiyo pa.</span></td>
-                </tr>
-            </tbody>
-        </table>
+        <h2><i class="fa-solid fa-table-list"></i> Talaan ng mga Taunang Gawain</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pangalan ng Gawain</th>
+                        <th>Petsa</th>
+                        <th>Lugar</th>
+                        <th>Tagapamahala</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Buwan ng United Nations</strong></td>
+                        <td><i class="fa-regular fa-calendar"></i> Oktubre 1, 2026</td>
+                        <td><i class="fa-solid fa-location-dot"></i> PNS Abueg Gymnasium</td>
+                        <td><span class="status-badge">Iaanunsiyo pa</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>7th Puerto Princesa Pista ng Kabataan</strong></td>
+                        <td><i class="fa-regular fa-calendar"></i> August 1, 2026</td>
+                        <td><i class="fa-solid fa-location-dot"></i> SM City Puerto Princesa - PGP Convention Hall</td>
+                        <td>City Youth Development Office</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Maghintay ng Karagdagang Anunsyo.</strong></td>
+                        <td><i class="fa-regular fa-calendar"></i> Nobyembre 2026</td>
+                        <td><i class="fa-solid fa-location-dot"></i> Old AP Department</td>
+                        <td><span class="status-badge">Iaanunsiyo pa</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Maghintay ng Karagdagang Anunsyo.</strong></td>
+                        <td><i class="fa-regular fa-calendar"></i> Disyembre 2026</td>
+                        <td><i class="fa-solid fa-location-dot"></i> Gymnasium ng PNS</td>
+                        <td><span class="status-badge">Iaanunsiyo pa</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Maghintay ng Karagdagang Anunsyo.</strong></td>
+                        <td><i class="fa-regular fa-calendar"></i> Pebrero 2027</td>
+                        <td><i class="fa-solid fa-location-dot"></i> Old AP Department</td>
+                        <td><span class="status-badge">Iaanunsiyo pa</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <footer>
