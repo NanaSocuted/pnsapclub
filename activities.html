@@ -12,7 +12,6 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mga Gawain - AP Club | Palawan National School">
     <meta property="og:description" content="Tingnan ang iskedyul ng mga proyekto at taunang aktibidad ng Samahan ng Araling Panlipunan sa Palawan National School.">
-    <!-- CHANGE 'https://yourdomain.com' TO YOUR ACTUAL WEBSITE URL BELOW -->
     <meta property="og:url" content="https://pnsapclub.netlify.app/activities">
     <meta property="og:image" content="https://pnsapclub.netlify.app/logo.jpg">
     <meta property="og:image:type" content="image/jpeg">
@@ -21,7 +20,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mga Gawain - AP Club | Palawan National School">
     <meta name="twitter:description" content="Tingnan ang iskedyul ng mga proyekto at taunang aktibidad ng Samahan ng Araling Panlipunan sa Palawan National School.">
-    <!-- CHANGE 'https://yourdomain.com' TO YOUR ACTUAL WEBSITE URL BELOW -->
     <meta name="twitter:image" content="https://pnsapclub.netlify.app/logo.jpg">
 
     <link rel="icon" type="image/jpeg" href="logo.jpg">
@@ -37,12 +35,21 @@
         }
 
         body {
+            /* SECTION B: CSS FONT STYLE */
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg);
+            font-size: 16px;
+            font-weight: 400;
             color: var(--text);
             line-height: 1.8;
+            margin: 0;
+            padding: 0;
+
+            /* SECTION C: CSS BACKGROUND */
+            background-color: var(--bg);
+            background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px);
+            background-repeat: repeat;
+            background-size: 24px 24px;
+            background-position: center center;
         }
 
         header {
@@ -117,6 +124,18 @@
             padding-bottom: 10px;
         }
 
+        h1 {
+            font-size: 28px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        .italic-text {
+            font-style: italic;
+        }
+
         ol {
             background-color: #FFFDF5;
             padding: 25px 45px;
@@ -125,7 +144,10 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
-        ol li { margin-bottom: 10px; font-weight: 600; }
+        ol li { 
+            margin-bottom: 10px; 
+            font-weight: 600; 
+        }
 
         table {
             width: 100%;
@@ -138,14 +160,19 @@
 
         th {
             background-color: var(--maroon);
-            color: white;
+            color: #ffffff;
             padding: 16px;
             text-align: left;
             border-bottom: 3px solid var(--gold);
             font-size: 16px;
+            font-weight: 600;
         }
 
-        td { padding: 14px 16px; border-bottom: 1px solid #eeeeee; }
+        td { 
+            padding: 14px 16px; 
+            border-bottom: 1px solid #eeeeee; 
+        }
+
         tr:nth-child(even) { background-color: #FFF9F9; }
         tr:hover { background-color: #FFF2F2; }
 
@@ -222,7 +249,7 @@
                     <td>Buwan ng United Nations</td>
                     <td>Oktubre 1, 2026</td>
                     <td>PNS Abueg Gymnasium</td>
-                    <td>Iaanunsiyo pa.</td>
+                    <td><span class="italic-text">Iaanunsiyo pa.</span></td>
                 </tr>
                 <tr>
                     <td>7th Puerto Princesa Pista ng Kabataan</td>
@@ -234,19 +261,19 @@
                     <td>Maghintay ng Karagdagang Anunsyo.</td>
                     <td>Nobyembre 00</td>
                     <td>Old AP Department</td>
-                    <td>Iaanunsiyo pa.</td>
+                    <td><span class="italic-text">Iaanunsiyo pa.</span></td>
                 </tr>
                 <tr>
                     <td>Maghintay ng Karagdagang Anunsyo.</td>
                     <td>Disyembre 00</td>
                     <td>Gymnasium ng PNS</td>
-                    <td>Iaanunsiyo pa.</td>
+                    <td><span class="italic-text">Iaanunsiyo pa.</span></td>
                 </tr>
                 <tr>
                     <td>Maghintay ng Karagdagang Anunsyo.</td>
                     <td>Pebreo 00</td>
                     <td>Old AP Department</td>
-                    <td>Iaanunsiyo pa.</td>
+                    <td><span class="italic-text">Iaanunsiyo pa.</span></td>
                 </tr>
             </tbody>
         </table>
