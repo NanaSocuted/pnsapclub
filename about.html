@@ -8,11 +8,11 @@
     <!-- Basic Meta Description -->
     <meta name="description" content="Alamin ang aming layunin, bisyon, misyon, istraktura ng organisasyon, at ang mga opisyal sa likod ng Samahan ng Araling Panlipunan ng Palawan National School.">
 
-    <!-- Open Graph Meta Tags (For Messenger, Facebook, WhatsApp, etc.) -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tungkol sa Amin - AP Club | Palawan National School">
     <meta property="og:description" content="Alamin ang aming layunin, bisyon, misyon, at ang mga opisyal sa likod ng Samahan ng Araling Panlipunan ng Palawan National School.">
-    <meta property="og:url" content="https://pnsapclub.netlify.app/about">
+    <meta property="og:url" content="https://pnsapclub.netlify.app/about.html">
     <meta property="og:image" content="https://pnsapclub.netlify.app/logo.jpg">
 
     <!-- Twitter Card Meta Tags -->
@@ -22,10 +22,15 @@
     <meta name="twitter:image" content="https://pnsapclub.netlify.app/logo.jpg">
 
     <link rel="icon" type="image/jpeg" href="logo.jpg">    
+
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
             --maroon-dark: #4A0000;
             --maroon: #7A0000;
+            --maroon-light: #990000;
             --gold: #D4AF37;
             --gold-light: #FFF8DC;
             --bg: #FAFAFA;
@@ -33,25 +38,25 @@
             --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
 
+        /* --- COLORS, BACKGROUNDS, FONTS & TEXT --- */
         body {
-            /* SECTION B: CSS FONT STYLE */
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; /* font-family */
-            font-size: 16px; /* font-size */
-            font-weight: 400; /* font-weight */
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
             color: var(--text);
             line-height: 1.8;
             margin: 0;
             padding: 0;
 
-            /* SECTION C: CSS BACKGROUND */
-            background-color: var(--bg); /* background-color */
-            background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px); /* background-image */
-            background-repeat: repeat; /* background-repeat */
-            background-size: 24px 24px; /* background-size */
-            background-position: center center; /* background-position */
-            /* High contrast background ensures text readability */
+            background-color: var(--bg);
+            background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px);
+            background-repeat: repeat;
+            background-size: 24px 24px;
+            background-position: center center;
+            background-attachment: fixed;
         }
 
+        /* --- HEADER & NAVIGATION --- */
         header {
             background: linear-gradient(135deg, var(--maroon-dark), var(--maroon));
             color: #ffffff;
@@ -83,7 +88,7 @@
 
         nav {
             background-color: var(--maroon-dark);
-            padding: 14px;
+            padding: 14px 10px;
             text-align: center;
             position: sticky;
             top: 0;
@@ -94,9 +99,9 @@
         nav a {
             color: #ffffff;
             text-decoration: none;
-            padding: 10px 22px;
+            padding: 10px 18px;
             margin: 0 4px;
-            font-weight: 600; /* font-weight */
+            font-weight: 600;
             border-radius: 20px;
             display: inline-block;
             transition: all 0.3s ease;
@@ -108,6 +113,7 @@
             transform: translateY(-2px);
         }
 
+        /* --- MAIN CONTAINER --- */
         .container {
             max-width: 960px;
             margin: 45px auto;
@@ -118,44 +124,85 @@
             border-top: 6px solid var(--maroon);
         }
 
-        h1, h2 {
+        h1, h2, h3 {
             color: var(--maroon);
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
         }
 
         h1 {
-            font-size: 28px; /* font-size */
+            font-size: 28px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 12px;
+            margin-top: 0;
         }
 
         h2 {
-            font-size: 22px; /* font-size */
+            font-size: 22px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+            margin-top: 35px;
         }
 
-        /* Explicit CSS font-style rule */
         .italic-text {
-            font-style: italic; /* font-style */
+            font-style: italic;
         }
 
-        .custom-list {
+        /* --- LISTS STYLING --- */
+        .custom-list-container {
             background-color: #FFFDF5;
-            padding: 25px 45px;
+            padding: 25px 35px;
             border-left: 5px solid var(--gold);
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            margin-top: 20px;
+            margin-bottom: 25px;
         }
 
-        .custom-list li {
+        .main-org-list {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .main-org-list > li {
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: var(--maroon-dark);
+        }
+
+        .sub-org-list {
+            list-style-type: circle;
+            padding-left: 25px;
+            margin-top: 6px;
+            font-weight: normal;
+            color: var(--text);
+        }
+
+        .sub-org-list li {
+            margin-bottom: 6px;
+        }
+
+        .nested-committee-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 3px;
+        }
+
+        .ordered-values-list {
+            list-style-type: decimal;
+            padding-left: 25px;
+        }
+
+        .ordered-values-list li {
             margin-bottom: 10px;
         }
 
+        /* --- FOOTER --- */
         footer {
             background-color: var(--maroon-dark);
             color: #ffffff;
             text-align: center;
             padding: 25px;
             margin-top: 60px;
-            font-size: 14px; /* font-size */
+            font-size: 14px;
             border-top: 4px solid var(--gold);
         }
     </style>
@@ -167,17 +214,19 @@
             <img src="logo.jpg" alt="AP Club Logo" class="club-logo" onerror="this.src='https://picsum.photos/id/1050/100/100'">
             <div>
                 <h1 style="margin: 0; font-size: 32px; color: #ffffff; border: none;">Samahan ng Araling Panlipunan</h1>
-                <h2 style="margin: 6px 0 0 0; font-size: 19px; color: var(--gold); font-weight: 400; border: none;">Palawan National School — Lungsod ng Puerto Princesa</h2>
+                <h2 style="margin: 6px 0 0 0; font-size: 19px; color: var(--gold); font-weight: 400; border: none;">
+                    <i class="fa-solid fa-landmark"></i> Palawan National School — Lungsod ng Puerto Princesa
+                </h2>
             </div>
         </div>
     </header>
 
     <nav>
-        <a href="index.html">Tahanan</a>
-        <a href="about.html" class="active">Tungkol sa Amin</a>
-        <a href="activities.html">Mga Gawain</a>
-        <a href="media.html">Galeriya ng Midya</a>
-        <a href="join.html">Sali Na!</a>
+        <a href="index.html"><i class="fa-solid fa-house"></i> Tahanan</a>
+        <a href="about.html" class="active"><i class="fa-solid fa-address-card"></i> Tungkol sa Amin</a>
+        <a href="activities.html"><i class="fa-solid fa-calendar-check"></i> Mga Gawain</a>
+        <a href="media.html"><i class="fa-solid fa-images"></i> Galeriya ng Midya</a>
+        <a href="join.html"><i class="fa-solid fa-user-plus"></i> Sali Na!</a>
     </nav>
 
     <div class="container">
@@ -199,90 +248,89 @@
             Patuloy kaming nagsisilbing tanglaw ng kaalaman upang hubugin ang mga mag-aaral na maging responsable at may pagmamahal sa bayan.
         </p>
 
-        <h2>Istraktura ng Organisasyon</h2>
-        <ul class="custom-list">
-            <li>Mga Opisyal na Tagapagpaganap
-                <ul>
-                    <li>Pangulo: Princess Vera C. Madsam</li>
-                    <li>Pangalawang Pangulo: Joross Carl B. Palomar</li>
-                    <li>Sekretarya: Mary Ysabel D. Relota</li>
-                    <li>Ingat-Yaman: Keziah Miyuki M. Sabero</li>
-                    <li>Tagasuri: Princess Mary Y. Villaverde</li>
-                    <li>Tagapag-ugnay ng Impormasyon: Jezelle Lee Villarubia</li>
-                    <li>Opisyal sa Protokol: Macky I. Darjuan</li>
-                    <li>Ikalawang Opisyal sa Protokol: Nina J. Cayetano</li>
-                </ul>
-            </li>
+        <!-- ORGANIZATIONAL STRUCTURE LISTS -->
+        <h2><i class="fa-solid fa-sitemap"></i> Istraktura ng Organisasyon</h2>
+        <div class="custom-list-container">
+            <ul class="main-org-list">
+                <li>Mga Opisyal na Tagapagpaganap (Executive Officers)
+                    <ul class="sub-org-list">
+                        <li><strong>Pangulo:</strong> Princess Vera C. Madsam</li>
+                        <li><strong>Pangalawang Pangulo:</strong> Joross Carl B. Palomar</li>
+                        <li><strong>Sekretarya:</strong> Mary Ysabel D. Relota</li>
+                        <li><strong>Ingat-Yaman:</strong> Keziah Miyuki M. Sabero</li>
+                        <li><strong>Tagasuri:</strong> Princess Mary Y. Villaverde</li>
+                        <li><strong>Tagapag-ugnay ng Impormasyon:</strong> Jezelle Lee Villarubia</li>
+                        <li><strong>Opisyal sa Protokol:</strong> Macky I. Darjuan</li>
+                        <li><strong>Ikalawang Opisyal sa Protokol:</strong> Nina J. Cayetano</li>
+                    </ul>
+                </li>
 
-            <li>Kinatawan ng bawat antas
-                <ul>
-                    <li>Kinatawan sa Baitang 7: Jaron Evan Steven M. Nazon</li>
-                    <li>Ikalawang Kinatawan sa Baitang 7: Kent V. Dequina</li>
-                    <li>Kinatawan sa Baitang 8: Lherine Althea Ramirez</li>
-                    <li>Ikalawang Kinatawan sa Baitang 8: Jaxynn Jaropohop</li>
-                    <li>Kinatawan sa Baitang 9: Lilian Llanera</li>
-                    <li>Ikalawang Kinatawan sa Biatang 9: Sevilla (Hindi pa naaalam/For futher research)</li>
-                    <li>Kinatawan sa Baitang 10: Virginia Kate P. Magboo</li>
-                    <li>Ikalawang Kinatawan sa Baitang 10: Danica C. Pozas</li>
-                </ul>
-            </li>
+                <li>Mga Kinatawan ng Bawat Antas (Grade Level Representatives)
+                    <ul class="sub-org-list">
+                        <li><strong>Kinatawan sa Baitang 7:</strong> Jaron Evan Steven M. Nazon</li>
+                        <li><strong>Ikalawang Kinatawan sa Baitang 7:</strong> Kent V. Dequina</li>
+                        <li><strong>Kinatawan sa Baitang 8:</strong> Lherine Althea Ramirez</li>
+                        <li><strong>Ikalawang Kinatawan sa Baitang 8:</strong> Jaxynn Jaropohop</li>
+                        <li><strong>Kinatawan sa Baitang 9:</strong> Lilian Llanera</li>
+                        <li><strong>Ikalawang Kinatawan sa Baitang 9:</strong> Sevilla (For further research)</li>
+                        <li><strong>Kinatawan sa Baitang 10:</strong> Virginia Kate P. Magboo</li>
+                        <li><strong>Ikalawang Kinatawan sa Baitang 10:</strong> Danica C. Pozas</li>
+                    </ul>
+                </li>
 
-            <li>Mga Ulo ng Komite
-                <ul>
-                    <li>Komite ng Sekretaryat: Shainaz Zachiko Bonayon
-                        <ul>
-                            <li><small class="italic-text">Itinalagang Opisyal para sa Pangunahing Komite: Mary Ysabel Relota</small></li>
-                        </ul>
-                    </li>
+                <li>Mga Ulo ng Komite (Committee Heads & Mentors)
+                    <ul class="sub-org-list">
+                        <li><strong>Komite ng Sekretaryat:</strong> Shainaz Zachiko Bonayon
+                            <ul class="nested-committee-list">
+                                <li><small class="italic-text">Itinalagang Opisyal: Mary Ysabel Relota</small></li>
+                            </ul>
+                        </li>
+                        <li><strong>Komite sa Pananalapi:</strong> Micah Zephaniah Alcazer
+                            <ul class="nested-committee-list">
+                                <li><small class="italic-text">Itinalagang Opisyal: Keziah Miyuki M. Sabero</small></li>
+                            </ul>
+                        </li>
+                        <li><strong>Komite sa Espesyal na Proyekto:</strong> Flouvhidynt R. Bague
+                            <ul class="nested-committee-list">
+                                <li><small class="italic-text">Itinalagang Opisyal: Princess Vera C. Madsam at Joross Carl B. Palomar</small></li>
+                            </ul>
+                        </li>
+                        <li><strong>Komite sa Pagpaplano:</strong> Clennie Repaso
+                            <ul class="nested-committee-list">
+                                <li><small class="italic-text">Itinalagang Opisyal: Princess Vera C. Madsam at Joross Carl B. Palomar</small></li>
+                            </ul>
+                        </li>
+                        <li><strong>Komite sa Dokumentasyon at Komunikasyon:</strong> Sheane Tal Precinillo
+                            <ul class="nested-committee-list">
+                                <li><small class="italic-text">Itinalagang Opisyal: Jezelle Lee Villarubia</small></li>
+                            </ul>
+                        </li>
+                        <li><strong>Komite sa Teknikal:</strong> Miguel Lorenz Llavan
+                            <ul class="nested-committee-list">
+                                <li><small class="italic-text">Itinalagang Opisyal: Macky I. Darjuan</small></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
 
-                    <li>Komite sa Pananalapi: Micah Zephaniah Alcazer
-                        <ul>
-                            <li><small class="italic-text">Itinalagang Opisyal para sa Pangunahing Komite: Keziah Miyuki M. Saberdo</small></li>
-                        </ul>
-                    </li>
+                <li>Mga Gurong Tagapayo sa Araling Panlipunan
+                    <ul class="sub-org-list">
+                        <li>Angeline Pedrosa Sapalaran</li>
+                        <li>Mayang Nolasco</li>
+                        <li>El Ca</li>
+                        <li>Mjoy PE</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
 
-                    <li>Komite sa mga Espesyal na Proyekto: Flouvhidynt R. Bague
-                        <ul>
-                            <li><small class="italic-text">Itinalagang Opisyal para sa Pangunahing Komite: Princess Vera C. Madsam at Joross Carl B. Palomar</small></li>
-                        </ul>
-                    </li>
-
-                    <li>Komite sa Pagpaplano: Clennie Repaso
-                        <ul>
-                            <li><small class="italic-text">Itinalagang Opisyal para sa Pangunahing Komite: Princess Vera C. Madsam at Joross Carl B. Palomar</small></li>
-                        </ul>
-                    </li>
-
-                    <li>Komite sa Dokumentasyon at Komunikasyon: Sheane Tal Precinillo
-                        <ul>
-                            <li><small class="italic-text">Itinalagang Opisyal para sa Pangunahing Komite: Jezelle Lee Villarubia</small></li>
-                        </ul>
-                    </li>
-
-                    <li>Komite sa Teknikal: Miguel Lorenz Llavan
-                        <ul>
-                            <li><small class="italic-text">Itinalagang Opisyal para sa Pangunahing Komite: Macky I. Darjuan</small></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-
-            <li>Mga Gurong Tagapayo sa Araling Panlipunan
-                <ul>
-                    <li>Angeline Pedrosa Sapalaran</li>
-                    <li>Mayang Nolasco</li>
-                    <li>El Ca</li>
-                    <li>Mjoy PE</li>
-                </ul>
-            </li>
-        </ul>
-
-        <h2>Pangunahing Halagahan (Core Values)</h2>
-        <ul class="custom-list">
+        <!-- CORE VALUES ORDERED LIST -->
+        <h2><i class="fa-solid fa-star"></i> Pangunahing Halagahan (Core Values)</h2>
+        <ol class="ordered-values-list">
             <li><b>Makabayan:</b> Pagmamahal sa bansang Pilipinas at sa lokal na pamana ng Palawan.</li>
             <li><b>Kagalingan at Katapatan:</b> Pagtataguyod ng katotohanan sa pag-aaral ng kasaysayan.</li>
             <li><b>Pamumuno:</b> Pagbibigay-kapangyarihan sa mga kabataan upang mamuno sa pamayanan.</li>
-        </ul>
+        </ol>
     </div>
 
     <footer>
