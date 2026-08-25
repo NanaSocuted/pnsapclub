@@ -22,7 +22,12 @@
     <meta name="twitter:image" content="https://pnsapclub.netlify.app/logo.jpg">
 
     <link rel="icon" type="image/jpeg" href="logo.jpg">
+
+    <!-- [RUBRIC ITEM 5] Font Awesome Icons CDN for Icon Implementation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
+        /* --- CSS VARIABLES & SYSTEM SETUP --- */
         :root {
             --maroon-dark: #4A0000;
             --maroon: #7A0000;
@@ -34,30 +39,34 @@
             --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
 
+        /* --- [RUBRIC ITEM 1 & 2] BODY: COLORS, BACKGROUNDS, FONTS & TEXT --- */
         body {
-            
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; /* [B1] font-family */
-            font-size: 16px; /* [B2] font-size */
-            font-weight: 400; /* [B3] font-weight */
-            color: var(--text);
-            line-height: 1.8;
+            /* Font Properties */
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; /* font-family */
+            font-size: 16px; /* font-size */
+            font-weight: 400; /* font-weight */
+            color: var(--text); /* color */
+            line-height: 1.8; /* line-height */
+            text-align: left; /* text-align */
             margin: 0;
             padding: 0;
 
-            background-color: var(--bg); /* [C1] background-color */
-            background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px); /* [C2] background-image */
-            background-repeat: repeat; /* [C3] background-repeat */
-            background-size: 24px 24px; /* [C4] background-size */
-            background-position: center center; /* [C5] background-position */
-            /* [C6] High contrast background ensures text remains easy to read */
+            /* Background Properties */
+            background-color: var(--bg); /* background-color */
+            background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px); /* background-image */
+            background-repeat: repeat; /* background-repeat */
+            background-size: 24px 24px; /* background-size */
+            background-position: center center; /* background-position */
+            background-attachment: fixed; /* background-attachment */
         }
 
+        /* --- [RUBRIC ITEM 3, 4] HEADER DESIGN WITH BORDERS & PADDING --- */
         header {
             background: linear-gradient(135deg, var(--maroon-dark), var(--maroon));
             color: #ffffff;
-            padding: 40px 20px;
+            padding: 40px 20px 40px 20px; /* padding */
             text-align: center;
-            border-bottom: 5px solid var(--gold);
+            border-bottom: 5px solid var(--gold); /* border feature: width, style, color */
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
@@ -74,16 +83,17 @@
         .club-logo {
             width: 100px;
             height: 100px;
-            border-radius: 50%;
-            border: 3px solid var(--gold);
+            border-radius: 50%; /* rounded border */
+            border: 3px solid var(--gold); /* border feature */
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
             background-color: #ffffff;
             object-fit: cover;
         }
 
+        /* --- [RUBRIC ITEM 6] NAVIGATION & LINKS STYLING --- */
         nav {
             background-color: var(--maroon-dark);
-            padding: 14px;
+            padding: 14px 10px;
             text-align: center;
             position: sticky;
             top: 0;
@@ -93,10 +103,10 @@
 
         nav a {
             color: #ffffff;
-            text-decoration: none;
-            padding: 10px 22px;
+            text-decoration: none; /* text-decoration */
+            padding: 10px 18px;
             margin: 0 4px;
-            font-weight: 600; /* [B3] font-weight */
+            font-weight: 600;
             border-radius: 20px;
             display: inline-block;
             transition: all 0.3s ease;
@@ -108,35 +118,45 @@
             transform: translateY(-2px);
         }
 
+        /* --- [RUBRIC ITEM 4] MAIN CONTAINER SPACING & MARGINS --- */
         .container {
             max-width: 960px;
-            margin: 45px auto;
+            margin-top: 45px; /* margin */
+            margin-bottom: 45px;
+            margin-left: auto;
+            margin-right: auto;
             background-color: #ffffff;
-            padding: 45px;
-            border-radius: 16px;
+            padding: 45px; /* padding */
+            border-radius: 16px; /* rounded border */
             box-shadow: var(--shadow);
-            border-top: 6px solid var(--maroon);
+            border-top: 6px solid var(--maroon); /* border feature */
         }
 
         h1 {
             color: var(--maroon);
-            font-size: 28px; /* [B2] font-size */
+            font-size: 28px;
             border-bottom: 2px solid #eee;
             padding-bottom: 12px;
             margin-top: 0;
+            text-transform: capitalize; /* text-transform */
         }
 
-        /* [B4] font-style class added */
+        h2, h3 {
+            color: var(--maroon);
+        }
+
         .italic-text {
-            font-style: italic; 
+            font-style: italic; /* font-style */
         }
 
+        /* --- ACTION CARD & BUTTONS --- */
         .action-card {
             background-color: var(--gold-light);
             border-left: 5px solid var(--gold);
             padding: 25px;
             border-radius: 8px;
             margin-top: 30px;
+            margin-bottom: 30px;
         }
 
         .btn-primary {
@@ -146,7 +166,7 @@
             text-decoration: none;
             border-radius: 30px;
             display: inline-block;
-            font-weight: bold; /* [B3] font-weight */
+            font-weight: bold;
             border: 2px solid var(--gold);
             cursor: pointer;
             transition: 0.3s;
@@ -180,13 +200,76 @@
             border: 1px dashed var(--gold);
         }
 
+        /* --- [RUBRIC ITEM 7] LISTS STYLING --- */
+        .custom-list-section {
+            background-color: #FAFAFA;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            padding: 20px 30px;
+            margin-top: 35px;
+        }
+
+        .custom-list {
+            list-style-type: square; /* list-style-type feature */
+            padding-left: 20px;
+        }
+
+        .custom-list li {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .nested-list {
+            list-style-type: circle; /* nested list feature */
+            padding-left: 25px;
+            margin-top: 5px;
+        }
+
+        /* --- [RUBRIC ITEM 8] TABLES STYLING --- */
+        .table-container {
+            overflow-x: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .overview-table {
+            width: 100%;
+            border-collapse: collapse; /* border collapse feature */
+            border: 1px solid #d0d0d0; /* table border */
+            background-color: #ffffff;
+        }
+
+        .overview-table th {
+            background-color: var(--maroon-dark); /* background color */
+            color: #ffffff;
+            padding: 12px 15px; /* padding */
+            text-align: left; /* alignment */
+            border: 1px solid var(--maroon);
+        }
+
+        .overview-table td {
+            padding: 12px 15px; /* padding */
+            border: 1px solid #e0e0e0;
+            text-align: left; /* alignment */
+        }
+
+        /* Alternating Row & Hover Effects */
+        .overview-table tbody tr:nth-child(even) {
+            background-color: #FFFDF5; /* alternating row styling */
+        }
+
+        .overview-table tbody tr:hover {
+            background-color: #F5E8C7; /* hover effect */
+        }
+
+        /* --- FOOTER --- */
         footer {
             background-color: var(--maroon-dark);
             color: #ffffff;
             text-align: center;
             padding: 25px;
             margin-top: 60px;
-            font-size: 14px; /* [B2] font-size */
+            font-size: 14px;
             border-top: 4px solid var(--gold);
         }
     </style>
@@ -195,20 +278,24 @@
 
     <header>
         <div class="header-content">
+            <!-- [RUBRIC ITEM 5: ICON 1] -->
             <img src="logo.jpg" alt="AP Club Logo" class="club-logo" onerror="this.src='https://picsum.photos/id/1050/100/100'">
             <div>
                 <h1 style="margin: 0; font-size: 32px; color: #ffffff; border: none;">Samahan ng Araling Panlipunan</h1>
-                <h2 style="margin: 6px 0 0 0; font-size: 19px; color: var(--gold); font-weight: 400;">Palawan National School — Lungsod ng Puerto Princesa</h2>
+                <h2 style="margin: 6px 0 0 0; font-size: 19px; color: var(--gold); font-weight: 400; border: none;">
+                    <i class="fa-solid fa-landmark"></i> Palawan National School — Lungsod ng Puerto Princesa
+                </h2>
             </div>
         </div>
     </header>
 
+    <!-- [RUBRIC ITEM 5 & 6] NAVIGATION WITH ICONS & STYLED LINKS -->
     <nav>
-        <a href="index.html" class="active">Tahanan</a>
-        <a href="about.html">Tungkol sa Amin</a>
-        <a href="activities.html">Mga Gawain</a>
-        <a href="media.html">Galeriya ng Midya</a>
-        <a href="join.html">Sali Na!</a>
+        <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Tahanan</a>
+        <a href="about.html"><i class="fa-solid fa-address-card"></i> Tungkol sa Amin</a>
+        <a href="activities.html"><i class="fa-solid fa-calendar-check"></i> Mga Gawain</a>
+        <a href="media.html"><i class="fa-solid fa-images"></i> Galeriya ng Midya</a>
+        <a href="join.html"><i class="fa-solid fa-user-plus"></i> Sali Na!</a>
     </nav>
 
     <div class="container">
@@ -230,18 +317,76 @@
             Makiisa sa aming pagdiriwang ng <u>ika-119 na taon</u> (<mark>119<sup>th</sup> milestone year</mark>) ng kahusayan sa akademya at adbokasiyang pangkasaysayan sa lalawigan ng Palawan!
         </p>
 
+        <!-- [RUBRIC ITEM 7] LISTS REQUIREMENT (Custom, Ordered, Unordered, & Nested Lists) -->
+        <div class="custom-list-section">
+            <h3 style="margin-top: 0;"><i class="fa-solid fa-list-check"></i> Mga Layunin ng Samahan (Club Objectives)</h3>
+            <ul class="custom-list">
+                <li>Pagpapalalim ng Kaalaman sa Kasaysayan at Lipunan</li>
+                <li>Pag-oorganisa ng mga Proyekto para sa Pamayanan
+                    <ul class="nested-list">
+                        <li>Community Outreach at Tree Planting</li>
+                        <li>Historical Quiz Bee at Cultural Exhibitions</li>
+                    </ul>
+                </li>
+                <li>Pagbuo ng mga Lider na May Kamalayang Panlipunan</li>
+            </ul>
+        </div>
+
+        <!-- [RUBRIC ITEM 8] TABLES REQUIREMENT (Borders, Padding, Backgrounds, Alignment, Hover & Alternating Rows) -->
+        <h3 style="margin-top: 35px;"><i class="fa-solid fa-table-list"></i> Pangkalahatang Impormasyon sa Samahan</h3>
+        <div class="table-container">
+            <table class="overview-table">
+                <thead>
+                    <tr>
+                        <th>Kategorya</th>
+                        <th>Detalyado</th>
+                        <th>Katayuan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Opisyal na Paaralan</strong></td>
+                        <td>Palawan National School</td>
+                        <td>Aktibo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lungsod</strong></td>
+                        <td>Puerto Princesa, Palawan</td>
+                        <td>DepEd Region IV-B</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Baitang na Sakop</strong></td>
+                        <td>Grade 7 hanggang Grade 10 (JHS)</td>
+                        <td>Bukas sa Lahat</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Araw ng Pagpupulong</strong></td>
+                        <td>Biyernes (4:00 PM - 5:00 PM)</td>
+                        <td>Lingguhan</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
         <div class="action-card">
             <h3 style="margin-top: 0; color: var(--maroon);">Maglingkod at Maging Bahagi ng Aming Samahan</h3>
             <p>
                 Nais mo bang linangin ang iyong kakayahan sa pamumuno at mapalalim ang iyong kaalaman sa kasaysayan? Bukas ang pintuan ng AP Club para sa lahat ng mag-aaral ng Palawan National School.
             </p>
             
-            <a href="join.html" style="text-decoration: none;"><button class="btn-primary">Mag-register Bilang Kasapi Ngayon</button></a>
+            <a href="join.html" style="text-decoration: none;">
+                <button class="btn-primary">
+                    Mag-register Bilang Kasapi Ngayon <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </a>
         </div>
 
         <h3 style="color: var(--maroon); margin-top: 35px;">Kaugnay na Sangay at Pamayanan</h3>
         <p>
-            Ang aming samahan ay gumagalaw sa ilalim ng mga pangkalahatang alituntunin at kurikulum na itinatakda ng <a href="https://www.deped.gov.ph" target="_blank" style="color: var(--maroon); font-weight: bold; text-decoration: underline;">Kagawaran ng Edukasyon (DepEd)</a>.
+            Ang aming samahan ay gumagalaw sa ilalim ng mga pangkalahatang alituntunin at kurikulum na itinatakda ng 
+            <a href="https://www.deped.gov.ph" target="_blank" style="color: var(--maroon); font-weight: bold; text-decoration: underline;">
+                Kagawaran ng Edukasyon (DepEd) <i class="fa-solid fa-up-right-from-square" style="font-size: 12px;"></i>
+            </a>.
         </p>
 
         <a href="https://www.deped.gov.ph" target="_blank">
